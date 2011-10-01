@@ -8,12 +8,12 @@ public class ResultActivity extends Activity{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.result);
 		Bundle extras = getIntent().getExtras();
 		TextView txtResult = (TextView)findViewById(R.id.txtResult);
 		txtResult.setText("El usuario es: " + extras.getString(LoginTestActivity.username));
+		TextView txtResult2 = (TextView)findViewById(R.id.txtResult);
+		txtResult2.setText("El password es: " + extras.getString(LoginTestActivity.password));
 	}
-	
 }

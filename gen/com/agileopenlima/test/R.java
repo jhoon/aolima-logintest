@@ -17,6 +17,7 @@ public final class R {
         public static final int btnLogin=0x7f050002;
         public static final int txtPassword=0x7f050001;
         public static final int txtResult=0x7f050003;
+        public static final int txtResult2=0x7f050004;
         public static final int txtUsername=0x7f050000;
     }
     public static final class layout {

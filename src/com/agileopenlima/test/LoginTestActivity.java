@@ -7,11 +7,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class LoginTestActivity extends Activity {
-    /** Called when the activity is first created. */
 	public static final String username = "username";
+	public static final String password = "password";
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,10 +21,11 @@ public class LoginTestActivity extends Activity {
         btnLogin.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
 				Intent myIntent =new Intent(getApplicationContext(), ResultActivity.class);
 				EditText txtUsername = (EditText)findViewById(R.id.txtUsername);
+				EditText txtPassword = (EditText)findViewById(R.id.txtPassword);
 				myIntent.putExtra(username, txtUsername.getText());
+				myIntent.putExtra(password, txtPassword.getText());
 				startActivity(myIntent);
 			}
 		});
